@@ -35,7 +35,8 @@ ADD_DEFINITIONS(-DOS_RTEMS_6)
 # be switched on a specific OSAL/PSP platform without modifications.
 set(RTEMS_DYNAMIC_LOAD      FALSE)
 
-set(RTEMS_BSP_C_FLAGS       "-march=i686 -mtune=i686 -fno-common")
+#set(RTEMS_BSP_C_FLAGS       "-march=armv8-a -mtune=armv8-a -fno-common")
+set(RTEMS_BSP_C_FLAGS       "-march=armv8-a -fno-common")
 set(RTEMS_BSP_CXX_FLAGS     ${RTEMS_BSP_C_FLAGS})
 set(RTEMS_BSP_SPECS_FLAGS   "")
 
@@ -64,9 +65,9 @@ set(LINK_LIBRARIES              "-lrtemsdefaultconfig -lrtemsbsp -lrtemscpu")
 # The TOOLS and BSP are allowed to be installed in different locations.
 # If the README was followed they will both be installed under $HOME
 # By default it is assumed the BSP is installed to the same directory as the tools
-SET(RTEMS_TOOLS_PREFIX "$ENV{HOME}/rtems-${CMAKE_SYSTEM_VERSION}" CACHE PATH
+SET(RTEMS_TOOLS_PREFIX "$ENV{HOME}/cfs/rpi/image/src/build/v6/tools" CACHE PATH
     "RTEMS tools install directory")
-SET(RTEMS_BSP_PREFIX "${RTEMS_TOOLS_PREFIX}" CACHE PATH
+SET(RTEMS_BSP_PREFIX "$ENV{HOME}/cfs/rpi/image/src/build/v6/kernel" CACHE PATH
     "RTEMS BSP install directory")
 
 # specify the cross compiler - adjust accord to compiler installation
