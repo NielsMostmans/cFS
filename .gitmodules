@@ -1,14 +1,14 @@
 [submodule "cfe"]
 	path = cfe
-	url = https://github.com/NielsMostmans/cfe.git
+	url = git@github.com:NielsMostmans/cfe.git
 	branch = main
 [submodule "osal"]
 	path = osal
-	url = https://github.com/NielsMostmans/osal.git
+	url = git@github.com:NielsMostmans/osal.git
 	branch = main
 [submodule "psp"]
 	path = psp
-	url = https://github.com/NielsMostmans/psp.git
+	url = git@github.com:NielsMostmans/psp.git
   branch = main
 [submodule "apps/ci_lab"]
 	path = apps/ci_lab
